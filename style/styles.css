@@ -1,0 +1,133 @@
+/* Master styles*/
+
+body {
+	margin: 0px;
+	font-family: "Poppins", sans-serif;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+/* Navigation Bar Styles*/
+
+.nav-wrapper{
+	display: flex; /*pone los divs uno al lado del otro*/
+	justify-content: space-between; /* Pone todos los divs equidistantes */
+	padding: 10px; /*agrega padding alrededor del elemento*/
+}
+
+.left-side{
+	display: flex;
+}
+
+.nav-wrapper > .left-side > div { /*Con esto selecciono todos los elementos div de nav-wrapper/left-side*/
+	margin-right: 20px; /* Agrega un margen a la derecha */
+	font-size: 0.9em; /*Cambia el tamaño de la letra a un 90% del tamaño original*/
+	text-transform: uppercase; /*transforma el contenido a mayuscula*/
+}
+
+.nav-link-wrapper {
+	height: 22px;
+	border-bottom: 1px solid transparent; /*Vuelve la barra transparente*/
+	transition: border-bottom 0.5s; /*se demora 0.5 segundos en volver la barra transparente */
+}
+
+.nav-link-wrapper a {
+	color: #8a8a8a; /* Cambia el color a las letras del nav bar */
+	text-decoration: none; /* Saca el subrayado */
+	transition: color 0.5s; 
+}
+
+.nav-link-wrapper:hover { /* Animacion cuando se desliza sobre el item seleccionado */
+	border-bottom: 1px solid black; /*Vuelve el borde solido y negro*/
+}
+
+.nav-link-wrapper a:hover {
+	color: black;
+}
+
+.right-side > div {
+	text-transform: uppercase;
+}
+
+.active-nav-link {
+	border-bottom: 1px solid black;
+}
+
+.active-nav-link a {
+	color: black !important;
+}
+
+/* Portfolio Styles*/
+.portfolio-items-wrapper { /* Contiene cada item del portfolio */
+	display: grid; /*Se va a hacer display en celdas */
+	grid-template-columns: 1fr 1fr 1fr; /* Se va a mostrar con 3 columnas */
+}
+
+.portfolio-item-wrapper {
+	position: relative; /* Esto nos sirve para poner elementos dentro con posición absoluta */
+}
+
+.portfolio-item-wrapper:hover img { /*estilo de los logos*/
+	opacity: 1.0;
+}
+
+.portfolio-img-background { /* Fondo de cada celda */
+	height: 350px;
+	width: 100%;
+	background-size: cover; /* Para que no haya problemas con imagenes de distinto tamaño */
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.img-text-wrapper { /*logo y texto en cada celda*/
+	position: absolute; /*para que estén sobre la imagen*/
+	top: 0; /*Estará lo más arriba posible*/
+	display: flex; /*Para que el logo y el texto queden al lado*/
+	flex-direction: column; /*Uno sobre el otro*/
+	justify-content: center; /*se justifican y alinean los elementos en el centro*/
+	align-items: center;
+	height: 100%;
+	text-align: center; 
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.logo-wrapper img { /*estilo de los logos*/
+	width: 40%;
+	margin-bottom: 10px;
+	opacity: 0.0;
+}
+
+.img-text-wrapper .subtitle { /* Para que el texto de los casilleros desaparezca */
+	transition: 1s;
+	font-weight: 600;
+	color: transparent;
+}
+
+.img-text-wrapper:hover .subtitle { /*estilo de las letras*/
+	font-weight: 600;
+	color: lightseagreen;
+}
+
+.img-darken { /* clase que hace que la imagen se haga obscura */
+	transition: 1s;
+	filter: brightness(10%);
+} 
+
+/* About page styles */
+
+.two-column-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.profile-image-wrapper img {
+	width: 80%;
+}
+
+.profile-content-wrapper h1 {
+	color: lightseagreen;
+}
